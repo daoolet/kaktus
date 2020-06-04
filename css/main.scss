@@ -9,7 +9,7 @@ $bold: 700;
     padding: 0;
     margin: 0;
 }
-
+// ================== Header
 .header {
     background-color: #87509c;
 }
@@ -29,7 +29,7 @@ $bold: 700;
 
         &__menu {
             margin-top: 60px;
-            // margin-left: auto;
+            // margin-left: auto;           
 
             li {
                 display: inline-block;
@@ -37,7 +37,7 @@ $bold: 700;
             }
 
             li:not(:last-child) {
-                margin-right: 35px;
+                margin-right: 15px;
             }
             
             a {
@@ -50,11 +50,12 @@ $bold: 700;
                 padding: 10px 15px;
                 border-radius: 6px;
                 transition: .3s;
-            }
 
-            a:hover {
-                background-color: #643a79;
+                &:hover {
+                    background-color: #643a79;
+                }
             }
+ 
         }
     }
 
@@ -84,6 +85,75 @@ $bold: 700;
             border-radius: 8px;
             padding: 20px 70px;
             cursor: pointer;
+        }
+    }
+}
+
+// ================== Services
+.services {
+    background-color: #17c2a4;
+
+    .wrapper {
+        height: 100%;
+        max-width: 1170px;
+        margin: 0 auto;
+
+        .services-intro {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            color: white;
+
+            &__title {
+                margin-top: 120px;
+                text-align: center;
+
+                text-transform: uppercase;
+                font-size: 40px;
+                font-weight: $bold;
+                
+                &::after {
+                    content: '';
+                    display: block;
+                    height: 4px;
+                    width: 8%;
+                    margin: 15px auto;
+                    background-color: #14a58c;
+                }
+            }
+
+            &__descr {
+                width: 50%;
+                margin: 0 auto;
+                font-size: 18px;
+                font-weight: $regular;
+            }
+        }
+
+        .services-row {
+            margin-top: 70px;
+
+            &-cards {
+                display: flex;
+                justify-content: space-between;
+                align-items: baseline;
+
+                .card {
+                    text-align: center;
+                    color: white;
+                    
+                    h3 {
+                        text-transform: uppercase;
+                        margin: 30px 0;
+                    }
+
+                    p {
+                        width: 75%;
+                        margin: 0 auto;
+                        margin-bottom: 120px;
+                    }
+                }
+            }
         }
     }
 }
