@@ -67,24 +67,23 @@
   background-color: #643a79;
 }
 
-.header, .services {
+.header {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   width: 100%;
   height: 100vh;
+  margin: 0 auto;
   background-color: #87509c;
 }
 
@@ -114,6 +113,23 @@
 }
 
 .services {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  height: 100vh;
   background-color: #17c2a4;
 }
 
@@ -134,6 +150,7 @@
   text-align: center;
   text-transform: uppercase;
   font-size: 40px;
+  letter-spacing: 4px;
   font-weight: 700;
 }
 
@@ -155,6 +172,7 @@
 
 .services .services-row {
   margin-top: 70px;
+  max-width: 1170px;
 }
 
 .services .services-row-cards {
@@ -171,7 +189,13 @@
 
 .services .services-row-cards .card {
   text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   color: white;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .services .services-row-cards .card h3 {
@@ -183,6 +207,157 @@
   width: 75%;
   margin: 0 auto;
   margin-bottom: 120px;
+}
+
+.team {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background-color: #e7f1f8;
+}
+
+.team h1, .team h3 {
+  text-transform: uppercase;
+  color: #3c4761;
+}
+
+.team-wrapper {
+  margin-top: 120px;
+}
+
+.team-intro {
+  text-align: center;
+  margin-bottom: 85px;
+}
+
+.team-intro h1 {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+.team-intro h1::after {
+  content: '';
+  display: block;
+  height: 4px;
+  width: 8%;
+  margin: 15px auto;
+  background-color: #c8d9e5;
+}
+
+.team-intro p {
+  font-size: 18px;
+  color: #3c4761;
+  font-weight: 400;
+}
+
+.team-row-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.team-row-card .person-card {
+  text-align: center;
+}
+
+.team-row-card .person-card img {
+  margin-bottom: 40px;
+}
+
+.team-row-card .person-card span {
+  color: #30bae7;
+}
+
+.team-row-card .person-card p {
+  width: 60%;
+  margin: 20px auto;
+  color: #919bac;
+}
+
+.team-row-card .person-card .social-net {
+  width: 260px;
+  margin: 0 auto;
+}
+
+.team-row-card .person-card .social-net a:not(:first-child) {
+  margin-left: 25px;
+}
+
+.skills {
+  background-color: #fff;
+}
+
+.skills-wrapper {
+  margin-top: 120px;
+  color: #3c4761;
+}
+
+.skills-intro {
+  text-align: center;
+  margin-bottom: 90px;
+}
+
+.skills-intro h1 {
+  text-transform: uppercase;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.skills-intro h1::after {
+  content: '';
+  display: block;
+  width: 10%;
+  height: 4px;
+  margin: 10px auto;
+  background-color: #dfe8ed;
+}
+
+.skills-intro p {
+  width: 70%;
+  margin: 10px  auto;
+}
+
+.skills-progress-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.skills-progress-cards .progress-card h3 {
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 700;
 }
 
 @media screen and (max-width: 1024px) {
