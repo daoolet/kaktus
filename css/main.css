@@ -6,46 +6,53 @@
   margin: 0;
 }
 
-.header {
-  background-color: #87509c;
-}
-
-.wrapper {
-  height: 100%;
-  max-width: 1170px;
-  margin: 0 auto;
-}
-
-.wrapper .nav {
+.navbar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  margin-right: 15%;
+}
+
+.navbar .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
+  height: 100px;
+  z-index: 1;
+  background-color: #87509c;
 }
 
-.wrapper .nav__logo {
-  margin-top: 60px;
+.navbar .nav__logo {
+  margin-left: 10%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 
-.wrapper .nav__menu {
-  margin-top: 60px;
-}
-
-.wrapper .nav__menu li {
+.navbar .nav__menu li {
   display: inline-block;
   list-style: none;
+  margin-right: 20px;
 }
 
-.wrapper .nav__menu li:not(:last-child) {
-  margin-right: 15px;
-}
-
-.wrapper .nav__menu a {
+.navbar .nav__menu a {
   text-transform: uppercase;
   text-decoration: none;
   color: white;
@@ -56,22 +63,42 @@
   transition: .3s;
 }
 
-.wrapper .nav__menu a:hover {
+.navbar .nav__menu a:hover {
   background-color: #643a79;
 }
 
-.wrapper .header-descr {
-  text-align: center;
-  color: white;
-  margin-top: 140px;
+.header, .services {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  height: 100vh;
+  background-color: #87509c;
 }
 
-.wrapper .header-descr .intro {
+.header-descr {
+  text-align: center;
+  color: white;
+}
+
+.header-descr .intro {
   font-size: 40px;
   font-weight: 700;
 }
 
-.wrapper .header-descr .header-button button {
+.header-descr .header-button button {
   margin-top: 60px;
   margin-bottom: 145px;
   text-transform: uppercase;
@@ -90,13 +117,7 @@
   background-color: #17c2a4;
 }
 
-.services .wrapper {
-  height: 100%;
-  max-width: 1170px;
-  margin: 0 auto;
-}
-
-.services .wrapper .services-intro {
+.services .services-intro {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -108,7 +129,7 @@
   color: white;
 }
 
-.services .wrapper .services-intro__title {
+.services .services-intro__title {
   margin-top: 120px;
   text-align: center;
   text-transform: uppercase;
@@ -116,7 +137,7 @@
   font-weight: 700;
 }
 
-.services .wrapper .services-intro__title::after {
+.services .services-intro__title::after {
   content: '';
   display: block;
   height: 4px;
@@ -125,18 +146,18 @@
   background-color: #14a58c;
 }
 
-.services .wrapper .services-intro__descr {
+.services .services-intro__descr {
   width: 50%;
   margin: 0 auto;
   font-size: 18px;
   font-weight: 400;
 }
 
-.services .wrapper .services-row {
+.services .services-row {
   margin-top: 70px;
 }
 
-.services .wrapper .services-row-cards {
+.services .services-row-cards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -148,19 +169,25 @@
           align-items: baseline;
 }
 
-.services .wrapper .services-row-cards .card {
+.services .services-row-cards .card {
   text-align: center;
   color: white;
 }
 
-.services .wrapper .services-row-cards .card h3 {
+.services .services-row-cards .card h3 {
   text-transform: uppercase;
   margin: 30px 0;
 }
 
-.services .wrapper .services-row-cards .card p {
+.services .services-row-cards .card p {
   width: 75%;
   margin: 0 auto;
   margin-bottom: 120px;
+}
+
+@media screen and (max-width: 1024px) {
+  .navbar .nav__menu li {
+    margin-right: 5px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

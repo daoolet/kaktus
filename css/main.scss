@@ -9,83 +9,98 @@ $bold: 700;
     padding: 0;
     margin: 0;
 }
-// ================== Header
-.header {
-    background-color: #87509c;
-}
-.wrapper {
-    height: 100%;
-    max-width: 1170px;
-    margin: 0 auto;
+
+// ================== Navbar
+.navbar {
+    display: flex;
+    justify-content: right;
+    margin-right: 15%;
 
     .nav {
         display: flex;
-        justify-content: space-between;
+        position: fixed;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
         align-items: center;
-        
-        &__logo {
-            margin-top: 60px;
-        }
+        width: 100%;
+        height: 100px;
+        z-index: 1;
 
-        &__menu {
-            margin-top: 60px;
-            // margin-left: auto;           
+        background-color: #87509c;
+
+        &__logo {
+            margin-left: 10%;
+            flex: 1 1 auto;
+        }
+    
+        &__menu {  
 
             li {
                 display: inline-block;
                 list-style: none;
+                margin-right: 20px;
             }
-
-            li:not(:last-child) {
-                margin-right: 15px;
-            }
-            
+               
             a {
                 text-transform: uppercase;
                 text-decoration: none;
-
+    
                 color: white;
                 font-size: 16px;
-
+    
                 padding: 10px 15px;
                 border-radius: 6px;
                 transition: .3s;
-
+    
                 &:hover {
                     background-color: #643a79;
                 }
             }
- 
+    
         }
     }
+}
 
-    .header-descr {
-        text-align: center;
+// ================== Header
+.header, .services {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    
+    width: 100%;
+    height: 100vh;
+    background-color: #87509c;
+}
+
+.header-descr {
+    text-align: center;
+    color: white;
+    
+    .intro {
+        font-size: 40px;
+        font-weight: $bold;
+    }
+
+    .header-button button {
+        margin-top: 60px;
+        margin-bottom: 145px;
+
+        text-transform: uppercase;
+        font-weight: $semi-bold;
+        font-size: 18px;
+
         color: white;
-        margin-top: 140px;
+        background-color: #eb7d4b;
 
-        .intro {
-            font-size: 40px;
-            font-weight: $bold;
-        }
-
-        .header-button button {
-            margin-top: 60px;
-            margin-bottom: 145px;
-
-            text-transform: uppercase;
-            font-weight: $semi-bold;
-            font-size: 18px;
-
-            color: white;
-            background-color: #eb7d4b;
-
-            border: none;
-            border-bottom: 5px solid #c86a40;
-            border-radius: 8px;
-            padding: 20px 70px;
-            cursor: pointer;
-        }
+        border: none;
+        border-bottom: 5px solid #c86a40;
+        border-radius: 8px;
+        padding: 20px 70px;
+        cursor: pointer;
     }
 }
 
@@ -93,65 +108,77 @@ $bold: 700;
 .services {
     background-color: #17c2a4;
 
-    .wrapper {
-        height: 100%;
-        max-width: 1170px;
-        margin: 0 auto;
+    .services-intro {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        color: white;
 
-        .services-intro {
-            display: flex;
-            flex-direction: column;
+        &__title {
+            margin-top: 120px;
             text-align: center;
-            color: white;
 
-            &__title {
-                margin-top: 120px;
-                text-align: center;
-
-                text-transform: uppercase;
-                font-size: 40px;
-                font-weight: $bold;
-                
-                &::after {
-                    content: '';
-                    display: block;
-                    height: 4px;
-                    width: 8%;
-                    margin: 15px auto;
-                    background-color: #14a58c;
-                }
-            }
-
-            &__descr {
-                width: 50%;
-                margin: 0 auto;
-                font-size: 18px;
-                font-weight: $regular;
+            text-transform: uppercase;
+            font-size: 40px;
+            font-weight: $bold;
+            
+            &::after {
+                content: '';
+                display: block;
+                height: 4px;
+                width: 8%;
+                margin: 15px auto;
+                background-color: #14a58c;
             }
         }
 
-        .services-row {
-            margin-top: 70px;
+        &__descr {
+            width: 50%;
+            margin: 0 auto;
+            font-size: 18px;
+            font-weight: $regular;
+        }
+    }
 
-            &-cards {
-                display: flex;
-                justify-content: space-between;
-                align-items: baseline;
+    .services-row {
+        margin-top: 70px;
 
-                .card {
-                    text-align: center;
-                    color: white;
-                    
-                    h3 {
-                        text-transform: uppercase;
-                        margin: 30px 0;
-                    }
+        &-cards {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
 
-                    p {
-                        width: 75%;
-                        margin: 0 auto;
-                        margin-bottom: 120px;
-                    }
+            .card {
+                text-align: center;
+                color: white;
+                
+                h3 {
+                    text-transform: uppercase;
+                    margin: 30px 0;
+                }
+
+                p {
+                    width: 75%;
+                    margin: 0 auto;
+                    margin-bottom: 120px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+    .navbar {
+        .nav {
+            &__menu {
+                li {
+                    margin-right: 5px;
                 }
             }
         }
